@@ -1,0 +1,38 @@
+.profile {
+  background-color: darkslategrey;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: darkslategrey;
+    padding: 10px;
+}
+
+.img-profile {
+  object-fit: cover;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+}
+
+.user-name {
+    color: aliceblue;
+    word-wrap: break-word;
+    font-weight: bold;
+    margin: 52px -8px;
+}
+
+
+@media (max-width: 992px) {
+  .img-profile {
+    width: 55%;
+    height: auto;
+  }
+
+  .user-name {
+     margin: 0px 14px 10px 14px;
+  }
+}
