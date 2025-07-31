@@ -1,10 +1,11 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="movie-sidebar-container bg-dark col-lg-2">
+    <div class="movie-sidebar-container bg-dark col px-0">
       <app-movie-sidebar></app-movie-sidebar>
     </div>
-    <div class="movie-header-container col-lg-10">
+    <div class="movie-header-container col">
       <app-movie-header></app-movie-header>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

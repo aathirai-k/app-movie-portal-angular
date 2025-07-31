@@ -1,14 +1,17 @@
 .movie-sidebar-container {
   height: 100vh;
+  flex: 0 0 20%;
+  max-width: 20%;
 }
 
 .movie-header-container {
     padding: 0px !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1250px) {
   .movie-sidebar-container {
-    width: 28%;
+    flex: 0 0 28%;
+    max-width: 28%;
   }
 
   .movie-header-container {
