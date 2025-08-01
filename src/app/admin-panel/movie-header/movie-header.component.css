@@ -1,0 +1,15 @@
+.movie-header-container {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px !important;
+}
+
+.user-icon {
+    font-size: 1em;
+    color: darkslateblue;
+    cursor: pointer;
+}
+
+.user {
+    padding: 5px;
+    cursor: pointer;
+}

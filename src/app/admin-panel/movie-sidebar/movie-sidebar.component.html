@@ -1,0 +1,27 @@
+<div>
+  <div class="profile-container">
+    <img src="assets/profile1.jpg" alt="Profile Image" class="img-profile" />
+    <div class="user-name">Aathirai Karunaharalingam</div>
+  </div>
+
+  <div class="side-lists">
+    <ul class="nav flex-column">
+      <li (click)="selectItem('Dashboard')" class="nav-item" [ngClass]="{ 'selected-item': selectedItem === 'Dashboard' }">
+        <a class="nav-link" [ngClass]="{ 'text-item': selectedItem === 'Dashboard' }" routerLink="/admin/dashboard">Dashboard</a>
+      </li>
+      <li (click)="selectItem('Movies')" class="nav-item" [ngClass]="{ 'selected-item': selectedItem === 'Movies' }">
+        <a class="nav-link" [ngClass]="{ 'text-item': selectedItem === 'Movies' }" routerLink="/admin/movies">Movies</a>
+      </li>
+      <li (click)="selectItem('Users')" class="nav-item" [ngClass]="{ 'selected-item': selectedItem === 'Users' }">
+        <a class="nav-link" [ngClass]="{ 'text-item': selectedItem === 'Users' }" routerLink="/users">Users</a>
+      </li>
+      <li (click)="selectItem('Tickets')" class="nav-item" [ngClass]="{ 'selected-item': selectedItem === 'Tickets' }">
+        <a class="nav-link" [ngClass]="{ 'text-item': selectedItem === 'Tickets' }" routerLink="/users">Tickets</a>
+      </li>
+      <li (click)="selectItem('Reports')"  class="nav-item" [ngClass]="{ 'selected-item': selectedItem === 'Reports' }">
+        <a class="nav-link" [ngClass]="{ 'text-item': selectedItem === 'Reports' }" routerLink="/users">Reports</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
