@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { MovieSidebarComponent } from '../movie-sidebar/movie-sidebar.component';
-import { MovieHeaderComponent } from '../movie-header/movie-header.component';
+import { AdminSidebarComponent } from '../admin-sidebar/admin-sidebar.component';
+import { AdminHeaderComponent } from '../admin-header/admin-header.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-admin-panel',
   standalone: true,
-  imports: [ MovieSidebarComponent, MovieHeaderComponent, RouterOutlet ],
+  imports: [ AdminSidebarComponent, AdminHeaderComponent, RouterOutlet ],
   templateUrl: './admin-panel.component.html',
   styleUrls: ['./admin-panel.component.css']
 })

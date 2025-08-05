@@ -1,0 +1,13 @@
+<div class="tab-buttons">
+  <button (click)="selectTab('addMovies')" [class.active]="activeTab === 'addMovies'">➕ Add Movie</button>
+  <button (click)="selectTab('manageMovies')" [class.active]="activeTab === 'manageMovies'">📋 Manage Movies</button>
+</div>
+
+<div class="movie-content">
+  <div *ngIf="activeTab === 'addMovies'">
+    <app-add-movie></app-add-movie>
+  </div>
+  <div *ngIf="activeTab === 'manageMovies'">
+    <app-movie-list-view></app-movie-list-view>
+  </div>
+</div>

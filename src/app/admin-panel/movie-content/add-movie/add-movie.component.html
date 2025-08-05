@@ -1,0 +1,53 @@
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()" class="movie-form container-fluid">
+  <div>
+    <label>Title</label>
+    <input formControlName="title" type="text" />
+    <div *ngIf="movieForm.get('title')?.touched && movieForm.get('title')?.invalid" class="error">
+      Title is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Description</label>
+    <textarea formControlName="description"></textarea>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <label>Genre</label>
+      <input formControlName="genre" type="text" />
+      <div *ngIf="movieForm.get('genre')?.touched && movieForm.get('genre')?.invalid" class="error">
+        Genre is required.
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <label>Release Year</label>
+      <input formControlName="releaseYear" type="number" (focus)="setCurrentYearIfEmpty()" />
+      <div *ngIf="movieForm.get('releaseYear')?.touched && movieForm.get('releaseYear')?.errors?.['pattern']">
+        Enter a valid 4-digit year.
+      </div>
+
+      <div *ngIf="movieForm.get('releaseYear')?.touched && movieForm.get('releaseYear')?.errors?.['futureYear']">
+        Year cannot be greater than current year.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label>Poster URL</label>
+    <input formControlName="posterUrl" type="text" />
+    <div *ngIf="movieForm.get('posterUrl')?.touched && movieForm.get('posterUrl')?.invalid" class="error">
+      Poster URL is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Trailer URL</label>
+    <input formControlName="trailerUrl" type="text" />
+  </div>
+
+  <button type="submit" [disabled]="movieForm.invalid">Add Movie</button>
+  <labe class="fw-bold" [ngClass]="{'text-success':isSuccessfullyAddedMovie, 'text-danger': !isSuccessfullyAddedMovie}">{{responseMessage}}</labe>
+</form>
+

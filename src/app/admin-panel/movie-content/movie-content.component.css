@@ -1,0 +1,29 @@
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap; /* allows buttons to wrap on smaller screens */
+  justify-content: center;
+  gap: 10px; /* spacing between buttons */
+  padding: 10px;
+  background-color: #f8f9fa; /* optional: background for clarity */
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-buttons button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tab-buttons button.active {
+  background-color: darkslategrey;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.movie-content {
+  margin-top: 40px;
+}
