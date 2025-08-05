@@ -1,0 +1,19 @@
+.movie-list-container-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pagination-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.table-responsive {
+    max-width: 1190px;
+}
+
+.movie-val {
+    word-break: break-word;
+}

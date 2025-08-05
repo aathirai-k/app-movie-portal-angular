@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-movie-sidebar',
+  selector: 'app-admin-sidebar',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './movie-sidebar.component.html',
-  styleUrl: './movie-sidebar.component.css'
+  templateUrl: './admin-sidebar.component.html',
+  styleUrl: './admin-sidebar.component.css'
 })
-export class MovieSidebarComponent {
+export class AdminSidebarComponent {
   selectedItem: String = "Dashboard";
 
   selectItem(navItem: string) {
