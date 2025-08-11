@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MovieService } from '../../../services/movie.service';
-import { Movie } from '../../../interfaces/movie.model';
+import { Movie } from '../../../model/movie.model';
 import { Modal } from 'bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';

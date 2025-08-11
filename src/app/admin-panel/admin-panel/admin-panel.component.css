@@ -1,5 +1,5 @@
 .movie-sidebar-container {
-  height: 100vh;
+  min-height: 100vh;
   flex: 0 0 20%;
   max-width: 20%;
 }
