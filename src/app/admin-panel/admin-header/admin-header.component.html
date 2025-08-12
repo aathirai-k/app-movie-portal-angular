@@ -1,14 +1,12 @@
-<div class="movie-header-container d-flex justify-content-end p-3">
-  <div class="dropdown text-end">
-    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle user"
-       data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="far fa-user user-icon"></i>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end text-small">
-      <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
-      <li><a class="dropdown-item" routerLink="/settings">Settings</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" routerLink="/logout">Logout</a></li>
-    </ul>
-  </div>
+<div class="custom-dropdown-container d-flex justify-content-end">
+  <button class="dropdown-toggle" (click)="toggleDropdown()">
+    <i class="far fa-user user-icon"></i>
+  </button>
+
+  <ul class="dropdown-menu" [class.show]="dropdownOpen">
+    <li><a routerLink="/profile" (click)="closeDropdown()">Profile</a></li>
+    <li><a routerLink="/settings" (click)="closeDropdown()">Settings</a></li>
+    <li><hr /></li>
+    <li><a (click)="logout()">Logout</a></li>
+  </ul>
 </div>

@@ -1,15 +1,52 @@
-.movie-header-container {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 5px !important;
+.custom-dropdown-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 4px;
 }
 
-.user-icon {
-    font-size: 1em;
-    color: darkslateblue;
-    cursor: pointer;
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
-.user {
-    padding: 5px;
-    cursor: pointer;
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+  margin-top: 38px;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    right: 10px;
+    min-width: 140px;
+  }
+
+  .dropdown-toggle {
+    font-size: 1.2rem;
+  }
 }
